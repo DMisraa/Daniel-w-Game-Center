@@ -1,0 +1,56 @@
+#players {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  list-style-type: none; /* Remove default list styling */
+  padding-bottom: 10px;
+  margin: 0;
+}
+
+#players button {
+  width: 3rem;
+  border: none;
+  background: none;
+  color: #c3ba78;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: color 0.2s;
+  padding: 0.5rem 0.25rem 0.25rem 0.25rem;
+  text-align: center;
+}
+
+.start-game-button {
+  background-color: #4CAF50; /* Green background */
+  border: none;              /* Remove borders */
+  color: white;              /* White text */
+  padding: 15px 32px;         /* Some padding */
+  text-align: center;        /* Center the text */
+  text-decoration: none;     /* Remove underline */
+  display: inline-block;     /* Get the element to behave like an inline element while preserving block-level features */
+  font-size: 16px;           /* Increase font size */
+  margin: 4px 2px;           /* Some margin */
+  cursor: pointer;           /* Add a pointer cursor on hover */
+  border-radius: 12px;       /* Rounded corners */
+  transition: background-color 0.3s ease;
+  align-items: center; /* Smooth transition for background color */
+}
+
+.start-game-button:hover {
+  background-color: #45a049; /* Darker green background on hover */
+}
+
+.container {
+  text-align: center; /* Center the button horizontally */
+ 
+}
+
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

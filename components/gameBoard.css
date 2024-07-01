@@ -1,0 +1,80 @@
+.game-board {
+  display: grid;
+  grid-template-columns: repeat(7, 50px); /* 7 columns */
+  grid-template-rows: repeat(6, 50px); /* 6 rows */
+  gap: 2px;
+  text-align: center;
+ 
+}
+
+.game-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  
+}
+
+.row {
+  display: contents;
+}
+
+.cell {
+  width: 50px;
+  height: 50px;
+  border: 1px solid black;
+  position: relative;
+}
+
+.token {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+}
+
+.red {
+  background-color: red;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+.winner-announcement {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.rematch-button {
+  background-color: #4CAF50; /* Green background */
+  border: none; /* Remove default border */
+  color: white; /* White text */
+  padding: 10px 20px; /* Increase padding for larger size */
+  text-align: center; /* Center text */
+  text-decoration: none; /* Remove underline */
+  display: inline-block; /* Inline block for proper size */
+  font-size: 24px; /* Increase font size */
+  cursor: pointer; /* Pointer cursor on hover */
+  border-radius: 12px; /* Rounded corners */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+  z-index: 1000; /* Ensure the button is on top */
+  margin-left: 10px
+}
+
+.rematch-button:hover {
+  background-color: #45a049; /* Darker green on hover */
+}
+
+.rematch-button:active {
+  background-color: #3e8e41; /* Even darker green on active */
+}
+
+.rematch-button:focus {
+  outline: none; /* Remove default focus outline */
+  box-shadow: 0 0 0 3px rgba(66, 133, 244, 0.6); /* Custom focus outline */
+}

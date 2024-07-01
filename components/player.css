@@ -1,0 +1,55 @@
+/* player.css */
+
+.player {
+  display: flex;
+  align-items: center;
+  margin: 10px;
+}
+
+.player-name {
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+/* button {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+button:active {
+  background-color: #3e8e41;
+}
+
+button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(66, 133, 244, 0.6);
+} */
+
+.yellow-active {
+  background-color: #f0f8ff;
+  border-left: 5px solid yellow;
+  padding-left: 10px;
+  transition: background-color 0.3s ease, border-left 0.3s ease;
+}
+
+.active .player-name {
+  color: #4CAF50;
+}
+
+.red-active {
+  background-color: #f0f8ff;
+  border-left: 5px solid red;
+  padding-left: 10px;
+  transition: background-color 0.3s ease, border-left 0.3s ease;
+}
+
+  

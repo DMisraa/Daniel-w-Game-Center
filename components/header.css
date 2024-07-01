@@ -1,0 +1,20 @@
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+    background-color: #f0f0f0;
+  }
+  
+  .logo {
+    width: 150px; /* Adjust the width as needed */
+    height: 130px; /* Maintain aspect ratio */
+    margin-bottom: 10px;
+  }
+  
+  .title {
+    font-size: 24px;
+    color: #333;
+    text-align: center;
+  }
