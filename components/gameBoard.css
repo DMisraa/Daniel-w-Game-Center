@@ -1,10 +1,11 @@
+
 .game-board {
   display: grid;
   grid-template-columns: repeat(7, 50px); /* 7 columns */
   grid-template-rows: repeat(6, 50px); /* 6 rows */
   gap: 2px;
   text-align: center;
- 
+  margin-top: 20px;
 }
 
 .game-container {
@@ -13,7 +14,10 @@
   align-items: center;
   justify-content: center;
   position: relative;
-  
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .row {
@@ -23,8 +27,15 @@
 .cell {
   width: 50px;
   height: 50px;
-  border: 1px solid black;
+  border: 2px solid #333;
   position: relative;
+  background-color: #f0f0f0;
+  transition: background-color 0.3s;
+}
+
+.cell:hover {
+  background-color: #ddd;
+  cursor: pointer;
 }
 
 .token {
@@ -34,6 +45,7 @@
   position: absolute;
   top: 5px;
   left: 5px;
+  transition: transform 0.3s ease;
 }
 
 .red {
@@ -48,6 +60,10 @@
   font-size: 24px;
   font-weight: bold;
   margin-bottom: 10px;
+  background: #fff3cd;
+  padding: 10px;
+  border: 1px solid #ffeeba;
+  border-radius: 5px;
 }
 
 .rematch-button {

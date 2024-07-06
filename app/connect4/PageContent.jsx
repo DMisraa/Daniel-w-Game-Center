@@ -8,7 +8,6 @@ import winningCombinations from "../../WINNING_COMBINATIONS";
 
 const initialBoard = Array.from({ length: 6 }, () => Array(7).fill(null));
 
-
 const PLAYERS = {
   red: "Red Player",
   yellow: "Yellow Player",
@@ -40,8 +39,8 @@ export default function PageContent() {
         setHasDraw(data.hasDraw);
         setAllTimeGameScore(data.allTimeWinners);
 
-        
-        if (data.board.some((row) => row.some((cell) => cell !== null))) {
+        // Check if there are moves in play
+        if (data.board.some(row => row.some(cell => cell !== null))) {
           setStartGame(true);
         }
       } catch (error) {
@@ -107,10 +106,6 @@ export default function PageContent() {
         body: JSON.stringify({ column: parseInt(column) }),
       });
 
-      const data = await response.json()
-
-      setAllTimeGameScore(data.allTimeWinners)
-
       if (!response.ok) {
         const error = await response.json();
         console.error("Error making a move:", error);
@@ -126,6 +121,19 @@ export default function PageContent() {
     setWinner(null);
     turnsLength = 0;
     setHasDraw(false);
+
+    //     try {
+    //         const response = await fetch('http://localhost:4000/gameboard', {
+    //             method: 'POST',
+    //             headers: {
+    //                 'Content-Type': 'application/json',
+    //             },
+    //         });
+    //         console.log(response)
+
+    //       } catch (error) {
+    //         console.error('Error starting a new game:', error);
+    //       }
   }
 
   function checkForWinner(board) {
@@ -152,7 +160,7 @@ export default function PageContent() {
   }
 
   return (
-    <div className={classes.pageContent}>
+    <>
       <ol id={classes.players} className={classes["highlight-player"]}>
         <Player
           name={redPlayerName}
@@ -202,6 +210,6 @@ export default function PageContent() {
           Red Player: <span>{allTimeGameScore.redPlayer}</span>
         </h3>
       </div>
-    </div>
+    </>
   );
 }
