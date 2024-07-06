@@ -1,6 +1,8 @@
 import React, { useRef, useEffect } from "react";
 import './player.css'
 
+
+
 function Player({ isEditing, handlePlayerName, handleEdit, name, isYellowActive, isRedActive }) {
   const inputRef = useRef(null);
 
