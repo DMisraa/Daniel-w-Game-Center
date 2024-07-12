@@ -9,7 +9,7 @@
 
 .highlight-player {
   font-weight: bold;
-  color: #0070f3;
+  color: black;
 }
 
 .container {
@@ -19,17 +19,17 @@
 
 .start-game-button {
   padding: 15px 30px;
-  background-color: #0070f3;
+  background-color: #4CAF50;
   color: white;
   border: none;
-  border-radius: 5px;
+  border-radius: 18px;
   font-size: 20px;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
 .start-game-button:hover {
-  background-color: #005bb5;
+  background-color: #45a049;
 }
 
 .scoreboard {

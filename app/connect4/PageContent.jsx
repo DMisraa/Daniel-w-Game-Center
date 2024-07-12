@@ -51,6 +51,7 @@ export default function PageContent() {
     fetchData();
   }, []);
 
+
   function handleRedChange(event) {
     setRedPlayerName(event.target.value);
   }
@@ -79,6 +80,10 @@ export default function PageContent() {
     turnsLength++;
 
     if (turnsLength === 42 && !winner) {
+      setAllTimeGameScore(prevState => ({
+        ...prevState,
+        draw: allTimeGameScore.draw + 1
+      }))
       setHasDraw(true);
     }
 
@@ -95,6 +100,7 @@ export default function PageContent() {
       setWinner(winningPlayer);
     } else {
       setCurrentPlayer(currentPlayer === "red" ? "yellow" : "red");
+      
     }
 
     try {
@@ -148,9 +154,17 @@ export default function PageContent() {
       ) {
         let winningPlayer;
         if (player === "red") {
+          setAllTimeGameScore(prevState => ({
+            ...prevState,
+            redPlayer: allTimeGameScore.redPlayer + 1
+          }))
           winningPlayer = redPlayerName;
           return winningPlayer;
         } else if (player === "yellow") {
+          setAllTimeGameScore(prevState => ({
+            ...prevState,
+            yellowPlayer: allTimeGameScore.yellowPlayer + 1
+          }))
           winningPlayer = yellowPlayerName;
           return winningPlayer;
         }
@@ -158,6 +172,8 @@ export default function PageContent() {
     }
     return null;
   }
+
+  
 
   return (
     <>
